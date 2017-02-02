@@ -1,6 +1,7 @@
-'use strict';
+/* global _ */
 
 (function() {
+	'use strict';
 
 	angular.module('LunchCheck', [])
 		.controller('LunchCheckController', LunchCheckController);
@@ -13,8 +14,8 @@
 		$scope.checkLunchItems = function() {
 			var lunchItemsArray = $scope.lunchItems.split(',');
 			lunchItemsArray = _.filter(lunchItemsArray, function(lunchItem) {
-				return lunchItem.trim() != '';
-			})
+				return lunchItem.trim() !== '';
+			});
 			if (lunchItemsArray.length > 3) {
 				$scope.remarks = "Too much!";
 			} else if (lunchItemsArray.length === 0) {
