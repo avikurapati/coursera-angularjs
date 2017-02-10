@@ -1,0 +1,11 @@
+h1 {
+  margin-bottom: 30px;
+}
+input[type="text"] {
+  width: 400px;
+  float: left;
+}
+.error {
+  color: red;
+}
+

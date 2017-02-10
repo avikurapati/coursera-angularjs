@@ -1,0 +1,7 @@
+<div class="row" ng-repeat="item in dirCtrl.found">
+  <span class="col-md-9">{{ item.name }}, {{ item.short_name }}, {{ item.description }}</span>
+  <button class="btn btn-default" ng-click="dirCtrl.onRemove({index: $index});">Don't want this one! 
+  </button>
+
+</div>
+<div class="error" ng-show="dirCtrl.found && dirCtrl.found.length === 0">Nothing found</div>
